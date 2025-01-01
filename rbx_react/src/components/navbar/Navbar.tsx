@@ -10,7 +10,9 @@ export default function Navbar() {
                 <p className={classes.menuDescription}>Cliquez ici pour découvrir d’autres artistes roubaisiens</p>
             </div>
             <div className={classes.caseVide}></div>
-            <div className={classes.caseLink}></div>
+            <div className={classes.caseLink}>
+                <p>Test nom</p>
+            </div>
         </div>
     )
 }
