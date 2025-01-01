@@ -1,0 +1,50 @@
+.container {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    max-width: 1920px;
+    width: 1729px;
+    height: 108px;
+    margin-bottom: 600px;
+
+    .menu {
+        width: 500px;
+        height: 108px;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .caseVide {
+        width: 1000px;
+        height: 108px;
+        border: 1px solid white;
+    }
+
+    .caseLink { 
+        width: 500px;
+        height: 108px;
+        display: flex;
+        border: 1px solid white;
+    }
+}
+
+.menuTitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.menuDescription {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    padding-left: 10px;
+    font-style: italic;
+}
