@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import classes from "./Navbar.module.scss";
+import data from "../../artists.json"
 
 export default function Navbar() {
   const [showImages, setShowImages] = useState(false);
 
   // Données d'exemple des artistes (vous pouvez remplacer par un fetch API plus tard)
-  const artists = [
-    { id: 1, name: "Artiste 1", image: "./assets/placeholder.png" },
-    { id: 2, name: "Artiste 2", image: "https://via.placeholder.com/150" },
-    { id: 3, name: "Artiste 3", image: "https://via.placeholder.com/150" },
-  ];
-
+  const artists = data;
   const handleMenuClick = () => {
     setShowImages(!showImages); // Toggle pour afficher/masquer les images
   };
@@ -24,10 +20,12 @@ export default function Navbar() {
         </p>
         {/* Affichage conditionnel des images */}
         {showImages && (
-        <div className={classes.artistsGrid}>
+        <div className={`${classes.artistsGrid} ${
+          showImages ? classes.show : classes.hide
+        }`}>
           {artists.map((artist) => (
-            <div key={artist.id} className={classes.artistCard}>
-              <img src={artist.image} alt={artist.name} className={classes.artistImage} />
+            <div key={artist.name} className={classes.artistCard}>
+              <img src={artist.thumbnail} alt={artist.name} className={classes.artistImage} />
               <p className={classes.artistName}>{artist.name}</p>
             </div>
           ))}
@@ -36,7 +34,7 @@ export default function Navbar() {
       </div>
       <div className={classes.caseVide}></div>
       <div className={classes.caseLink}>
-        <p>Test nom</p>
+        <p>$</p>
       </div>
 
       

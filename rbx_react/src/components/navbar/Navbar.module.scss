@@ -55,31 +55,56 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 20px;
-    animation: slideIn 0.5s ease-in-out;
+    &.show {
+      animation: slideIn 0.5s ease forwards;
+    }
+  
+    &.hide {
+      animation: slideOut 0.5s ease forwards;
+    }
   }
 
 
   @keyframes slideIn {
     from {
+      opacity: 0;
       transform: translateX(-100%);
     }
     to {
+      opacity: 1;
       transform: translateX(0);
     }
   }
+
+
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(0);
+    }
+  }
+
+  
+  
   
   .artistCard {
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #000000;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .artistImage {
-    width: 100%;
+    width: 185.38px;
+    height: 185.38px;
     height: auto;
     border-radius: 4px;
+
   }
   
   .artistName {
