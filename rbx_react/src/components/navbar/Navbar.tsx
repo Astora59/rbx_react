@@ -4,11 +4,16 @@ import data from "../../artists.json"
 
 export default function Navbar() {
   const [showImages, setShowImages] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   // Données d'exemple des artistes (vous pouvez remplacer par un fetch API plus tard)
   const artists = data;
   const handleMenuClick = () => {
     setShowImages(!showImages); // Toggle pour afficher/masquer les images
+  };
+
+  const hideMenu = () => {
+    setShowMenu(false);
   };
 
   return (
@@ -19,18 +24,23 @@ export default function Navbar() {
           Cliquez ici pour découvrir d’autres artistes roubaisiens
         </p>
         {/* Affichage conditionnel des images */}
-        {showImages && (
-        <div className={`${classes.artistsGrid} ${
-          showImages ? classes.show : classes.hide
-        }`}>
+        <div
+          className={`${classes.artistsGrid} ${
+            showImages ? classes.show : classes.hide
+          }`}
+        >
           {artists.map((artist) => (
             <div key={artist.name} className={classes.artistCard}>
-              <img src={artist.thumbnail} alt={artist.name} className={classes.artistImage} />
-              <p className={classes.artistName}>{artist.name}</p>
+              <img
+                src={artist.thumbnail}
+                alt={artist.name}
+                className={classes.artistImage}
+              />
+              <p className={classes.artistName}>{artist.name.toUpperCase()}</p>
             </div>
           ))}
         </div>
-      )}
+
       </div>
       <div className={classes.caseVide}></div>
       <div className={classes.caseLink}>
