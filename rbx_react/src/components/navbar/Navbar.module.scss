@@ -57,6 +57,10 @@
     top: 0;
     left: 0;
     pointer-events: none;
+    overflow-y: auto;
+    max-height: 1000px; 
+    height: 100%;
+    scroll-behavior: smooth;
 
     &.show {
       animation: slideIn 0.5s ease forwards;
@@ -64,9 +68,27 @@
     }
   
     &.hide {
-      //animation: slideOut 0.5s ease forwards;
+      animation: slideOut 0.5s ease forwards;
       pointer-events: none; /* Empêche les interactions */
       opacity: 0; /* Assure que l'élément est invisible après l'animation */
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px; /* Largeur de la scrollbar */
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #888888; /* Couleur de la barre de défilement */
+      border-radius: 4px; /* Arrondi */
+      border: 2px solid #000; /* Bordure autour du thumb pour un contraste */
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #1cbe7c; /* Couleur au survol */
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: #121212; /* Couleur de l'arrière-plan */
     }
   }
 
@@ -94,11 +116,27 @@
     }
   }
   
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    left: 550px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10;
+    filter: invert(100%) sepia(14%) saturate(7456%) hue-rotate(235deg) brightness(119%) contrast(116%);
+
+    &:hover {
+      filter: invert(54%) sepia(62%) saturate(518%) hue-rotate(104deg) brightness(97%) contrast(94%);
+    }
+  }
 
   
   
   
   .artistCard {
+    display: flex;
+    align-items: center;
     text-align: center;
     background-color: #000000;
     width: 500px;
@@ -114,11 +152,14 @@
   }
   
   .artistImage {
+    display: flex;
+    align-items: center;
     width: 500px;
     height: 185.38px;
     border-radius: 4px;
     object-fit: cover;
     filter: brightness(30%);
+    
   }
 
   .artistImage:hover {
@@ -135,5 +176,7 @@
     font-size: 40px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour le texte */
-    text-align: center; /* Centre le texte (utile pour plusieurs lignes) */
+    margin: 0;
   }
+
+  

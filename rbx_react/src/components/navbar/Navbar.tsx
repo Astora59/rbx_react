@@ -4,7 +4,7 @@ import data from "../../artists.json"
 
 export default function Navbar() {
   const [showImages, setShowImages] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
+  
 
   // Données d'exemple des artistes (vous pouvez remplacer par un fetch API plus tard)
   const artists = data;
@@ -12,9 +12,7 @@ export default function Navbar() {
     setShowImages(!showImages); // Toggle pour afficher/masquer les images
   };
 
-  const hideMenu = () => {
-    setShowMenu(false);
-  };
+  
 
   return (
     <div className={classes.container}>
@@ -40,7 +38,7 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-
+        {showImages && (<img src="./src/assets/close.png" alt="croix fermeture" onClick={handleMenuClick} className={classes.closeButton}/>)}
       </div>
       <div className={classes.caseVide}></div>
       <div className={classes.caseLink}>
