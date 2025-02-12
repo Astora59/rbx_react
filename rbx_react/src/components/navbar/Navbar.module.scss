@@ -7,7 +7,7 @@
     max-width: 1920px;
     width: 1729px;
     height: 108px;
-    margin-bottom: 600px;
+    margin-bottom: 700px;
 
     .menu {
         width: 500px;
@@ -144,12 +144,18 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     display: inline-block; /* S'adapte à la taille de l'image */
+
   }
 
   .artistCard:hover {
     cursor: pointer;
     background-color: #22E898;
   }
+
+  .artistCard:hover .artistImage {
+    filter: brightness(80%);
+}
+
   
   .artistImage {
     display: flex;
@@ -160,11 +166,6 @@
     object-fit: cover;
     filter: brightness(30%);
     
-  }
-
-  .artistImage:hover {
-    cursor: pointer;
-    filter: brightness(80%);
   }
   
   .artistName {
@@ -177,6 +178,7 @@
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour le texte */
     margin: 0;
+
   }
 
   
