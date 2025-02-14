@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   // State pour afficher/masquer les images
   const [showImages, setShowImages] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
   
 
   // Données des artistes (API plus tard)
@@ -30,7 +31,7 @@ export default function Navbar() {
           }`}
         >
           {artists.map((artist) => (
-            <Link to={`/artist/${artist._id}`} key={artist.name} className={classes.artistLink}>
+            <Link to={`/artist/${artist._id.$oid}`} key={artist.name} className={classes.artistLink}>
             <div key={artist.name} className={classes.artistCard}>
               <img
                 src={artist.thumbnail}

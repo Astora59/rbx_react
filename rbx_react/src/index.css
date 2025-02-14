@@ -29,7 +29,9 @@ body {
   min-height: 100vh;
   max-width: 1920px;
   max-height: 1080px;
-  font-family: 'Roboto', sans-serif;   
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  
 }
 
 h1 {

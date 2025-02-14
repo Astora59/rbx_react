@@ -4,11 +4,12 @@ import './index.css'
 import App from './App.tsx'
 import NotFound from "./pages/NotFound/NotFound.tsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import ArtistPage from './pages/ArtistPage/ArtistPage.tsx'
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
   {path: "*", element: <NotFound />},
-  {path: "/artists/:id", element: <App />}
+  {path: "/artist/:_id", element: <ArtistPage />}
 
 ]);
 
