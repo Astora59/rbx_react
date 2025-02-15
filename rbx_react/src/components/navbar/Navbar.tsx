@@ -13,6 +13,7 @@ export default function Navbar() {
   const artists = data;
   const handleMenuClick = () => {
     setShowImages(!showImages); // Toggle pour afficher/masquer les images
+    
   };
 
   

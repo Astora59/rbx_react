@@ -68,6 +68,11 @@
     }
   
     &.hide {
+      pointer-events: none; /* Empêche les interactions */
+      opacity: 0; /* Assure que l'élément est invisible après l'animation */
+    }
+
+    &.hideAnimation {
       animation: slideOut 0.5s ease forwards;
       pointer-events: none; /* Empêche les interactions */
       opacity: 0; /* Assure que l'élément est invisible après l'animation */
@@ -125,6 +130,7 @@
     cursor: pointer;
     z-index: 10;
     filter: invert(100%) sepia(14%) saturate(7456%) hue-rotate(235deg) brightness(119%) contrast(116%);
+    
 
     &:hover {
       filter: invert(54%) sepia(62%) saturate(518%) hue-rotate(104deg) brightness(97%) contrast(94%);
