@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import classes from "./Navbar.module.scss";
 import data from "../../artists.json"
-import { Link } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
+import close from "./../../assets/close.png"
 export default function Navbar() {
   // State pour afficher/masquer les images
   const [showImages, setShowImages] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
+  
   
 
   // Données des artistes (API plus tard)
   const artists = data;
+  const { _id } = useParams();
+  const artist = data.find(artist => artist._id.$oid === _id);
   const handleMenuClick = () => {
     setShowImages(!showImages); // Toggle pour afficher/masquer les images
     
@@ -44,11 +46,11 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        {showImages && (<img src="./src/assets/close.png" alt="croix fermeture" onClick={handleMenuClick} className={classes.closeButton}/>)}
+        {showImages && (<img src={close} alt="croix fermeture" onClick={handleMenuClick} className={classes.closeButton}/>)}
       </div>
       <div className={classes.caseVide}></div>
       <div className={classes.caseLink}>
-        <p>Rajouter un nom quand on clique sur l'artiste sélectionné</p>
+        <p className={classes.artistNameEmptyCase}>{artist?.name.toUpperCase()}</p>
       </div>
 
       
