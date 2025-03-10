@@ -49,9 +49,13 @@ export default function Navbar() {
         {showImages && (<img src={close} alt="croix fermeture" onClick={handleMenuClick} className={classes.closeButton}/>)}
       </div>
       <div className={classes.caseVide}></div>
-      <div className={classes.caseLink}>
-        <p className={classes.artistNameEmptyCase}>{artist?.name.toUpperCase()}</p>
-      </div>
+      <a href={artist?.contact} className={classes.link}>
+        <div className={classes.caseLink}>
+          <h2 className={classes.artistNameEmptyCase}>{artist?.name.toUpperCase()}</h2>
+          <p>liens vers les artistes</p>
+        </div>
+      </a>
+      
 
       
       

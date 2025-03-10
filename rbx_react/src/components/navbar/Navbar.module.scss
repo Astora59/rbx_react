@@ -31,6 +31,10 @@
         height: 108px;
         display: flex;
         border: 1px solid white;
+        flex-direction: column;
+        gap: 0;
+        text-align: left;
+        padding-left: 20px;
     }
 }
 
@@ -195,7 +199,16 @@
   }
 
   .artistNameEmptyCase {
-    padding: 20px;
-    padding-top: 30px;
+    margin-bottom: 0;
 
   }
+
+   a {
+    color: white;
+    cursor: pointer;
+
+    &:hover { 
+      color: white;
+      cursor: pointer;
+    }
+   }
