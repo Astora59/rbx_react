@@ -3,6 +3,9 @@ import classes from "./Navbar.module.scss";
 import data from "../../artists.json"
 import { Link, useParams } from "react-router-dom";
 import close from "./../../assets/close.png"
+import arrow from "./../../assets/Vector.png"
+
+
 export default function Navbar() {
   // State pour afficher/masquer les images
   const [showImages, setShowImages] = useState(false);
@@ -49,11 +52,13 @@ export default function Navbar() {
         {showImages && (<img src={close} alt="croix fermeture" onClick={handleMenuClick} className={classes.closeButton}/>)}
       </div>
       <div className={classes.caseVide}></div>
-      <a href={artist?.contact} className={classes.link}>
-        <div className={classes.caseLink}>
+      <a href={artist?.contact} className={classes.linktoArtistPage}>
+      <div className={classes.caseLink}>
           <h2 className={classes.artistNameEmptyCase}>{artist?.name.toUpperCase()}</h2>
-          <p>liens vers les artistes</p>
+          <img src={arrow} alt="flèche mène vers lien" className={classes.arrow}/>
         </div>
+        
+        
       </a>
       
 

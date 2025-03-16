@@ -27,12 +27,12 @@
       "_id": {
         "$oid": "45784522c08"
       },
-      "name": "Test",
-      "genre": "musique",
-      "contact": "https://www.instagram.com/dalibido_6dl/",
-      "thumbnail": "https://static.wikia.nocookie.net/mogapedia/images/a/af/MHRS-Gore_Magala_Screenshot_001.jpg/revision/latest?cb=20230501202807&path-prefix=fr",
-      "vid": "https://www.youtube.com/watch?v=7K94_nBSw4I",
-      "description": "on les crève les facho"
+      "name": "Un kawa sur place",
+      "genre": "interviews d'artistes",
+      "contact": "https://www.instagram.com/unkawasurplace/",
+      "thumbnail": "https://i.ytimg.com/vi/2AQj1pVtF-M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDEOXaGqWMgC4NN1x2ODqxQOUYVJA",
+      "vid": "https://www.youtube.com/watch?v=J7gpI1gqoI4",
+      "description": "Dans un monde où tout va toujours plus vite, Un Kawa Sur Place se veut un moment de pause. L'idée est simple: prendre le temps, devant un café, et discuter avec des artistes, des créateur.ices, des entreprenur.es, comprendre leurs projets, leur vision... Un espace intime, comme une conversation entre amis, où chaque échange est un instant suspendu, authentique et sans pression."
     }
     
   ]

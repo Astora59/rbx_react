@@ -31,12 +31,15 @@
         height: 108px;
         display: flex;
         border: 1px solid white;
-        flex-direction: column;
-        gap: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         text-align: left;
         padding-left: 20px;
     }
 }
+
+
 
 .menuTitle {
     font-weight: 500;
@@ -200,6 +203,7 @@
 
   .artistNameEmptyCase {
     margin-bottom: 0;
+    margin: 0;
 
   }
 
@@ -212,3 +216,10 @@
       cursor: pointer;
     }
    }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+
+  }
